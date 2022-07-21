@@ -3,7 +3,8 @@ const User = require("../models/User.js");
 
 const getBooks = async (req, res) => {
   try {
-    const books = await Book.find();
+    const options = req.query;
+    const books = await Book.paginate({}, options);
     return res.status(200).json({ books: books });
   } catch (error) {
     return res.status(500).json({ error: error });

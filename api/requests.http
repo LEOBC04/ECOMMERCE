@@ -3,7 +3,7 @@
 #(BOOKS ROUTES)
 
 ###
-GET http://localhost:3000/books/ HTTP/1.1
+GET http://localhost:3000/books?limit=(NUMBER)&page=(NUMBER) HTTP/1.1
 
 ###
 GET http://localhost:3000/books/:idBook HTTP/1.1
@@ -41,35 +41,34 @@ DELETE http://localhost:3000/books/:idBook  HTTP/1.1
 #(USERS ROUTES)
 
 ###
-GET http://localhost:3000/users/ 
-    Content-Type: application/json
-    RETORNA TODOS LOS USUARIOS 
+GET http://localhost:3000/users/ HTTP/1.1
 
 ###
-GET http://localhost:3000/users/:idUser
-    Content-Type: application/json
-    RETORNA EL USUARIO
+GET http://localhost:3000/users/:idUser HTTP/1.1
 
 ##
-PUT http://localhost:3000/users/:idUser 
-    Content-Type: application/json
-    RETORNA MENSAJE DE ACTUALIZACION
-    {status: 'Usuario actualizado.'}
+PUT http://localhost:3000/users/:idUser HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":"name updated"
+}
 
 ##
-POST http://localhost:3000/users/register
-    Content-Type: application/json
-    RETORNA MENSAJE DE CREACION
-    { status: 'usuario registrado y guardado en la base de datos.' }
+POST http://localhost:3000/users/register HTTP/1.1
+Content-Type: application/json
+
+{ status: 'usuario registrado y guardado en la base de datos.' }
 
 
 ##
-PUT http://localhost:3000/users/:idUser/:idBook 
-    Content-Type: application/json
-    RETORNA EL USUARIO CON LOS LIBROS AGREGADOS
+PUT http://localhost:3000/users/:idUser/:idBook HTTP/1.1
+Content-Type: application/json
+
 
 ##
-DELETE http://localhost:3000/users/:idUser
-       Content-Type: application/json
-       { status: 'Usuario eliminado' }
+DELETE http://localhost:3000/users/:idUser HTTP/1.1
+Content-Type: application/json
+
+{ status: 'Usuario eliminado' }
 

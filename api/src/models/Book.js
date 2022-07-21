@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+const mongoosePagination = require("mongoose-paginate-v2");
 
 const bookSchema = new Schema(
   {
@@ -32,19 +33,17 @@ const bookSchema = new Schema(
       required: true,
     },
     released: {
-
       type: String,
-      required: true
+      required: true,
     },
     pageCount: {
-      type:Number
+      type: Number,
     },
     language: {
-      type:String
+      type: String,
     },
     book_type: {
-      type:String
-
+      type: String,
     },
     sellers: [
       {
@@ -59,6 +58,6 @@ const bookSchema = new Schema(
   }
 );
 
+bookSchema.plugin(mongoosePagination);
 
 module.exports = model("Book", bookSchema);
-
