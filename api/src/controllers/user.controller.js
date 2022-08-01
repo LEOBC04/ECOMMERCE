@@ -2,6 +2,7 @@ const User = require("../models/User.js");
 const Book = require("../models/Book.js");
 const bcrypt = require("bcrypt");
 const { getByName } = require("../lib/user.controller.helper.js");
+const { sendMailActivateGoogle } = require("./sendMail.controller.js");
 
 
 const getUsers = async (req, res) => {
@@ -46,6 +47,7 @@ const postUserGoogle = async (req, res) => {
       log_Google:true
   });
     await nuevoUsuario.save();
+    sendMailActivateGoogle(password,email)
     return res
       .status(201)
       .json({ status: "usuario registrado mediante Google y guardado en la base de datos." });

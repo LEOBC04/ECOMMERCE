@@ -5,7 +5,7 @@ const {
   sendMailActivate,
   sendMailForgot,
 } = require("./sendMail.controller.js");
-
+const nodemailer = require("nodemailer");
 const signUp = async (req, res) => {
   const { name, email, password } = req.body;
   try {
@@ -84,9 +84,10 @@ const login = async (req, res) => {
       await User.findOneAndUpdate(
         {email},
         {localStorageToken:token}
+        // el token que se ve aqui ↑ es un token pasado de un inicio de sesion previo. No el nuevo.
       )
-      console.log("el token es :",token)
-      return res.status(200).json({auth:"Usuario logueado mediante Google Login",user,token});
+      console.log("el token para que vaya al local storage es :",token)
+      return res.status(200).json({auth:"Usuario logueado mediante Google Login.",user,TokenParaLocalStorage:token});
     } else {
       return res.status(400).json({auth:"Contraseña incorrecta",user})
     }
