@@ -8,6 +8,7 @@ import User from './components/User/user.jsx';
 import WishList from './components/WishList/wishList.jsx';
 import AddBook from './components/BookForm/addBook.jsx';
 import GiftCard from './components/GiftCard/giftCard';
+import GitftPayment10 from './components/GiftCard/gitftPayment10';
 import { ToastContainer } from 'react-toastify'
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route path='wish' element={< WishList />} />
         <Route path='gift' element={< GiftCard />} />
       </Route>
+      <Route path='/payment10' element={ < GitftPayment10 /> }/>
      </Routes>
     </div>
   ); 

@@ -60,8 +60,11 @@
           color: white;
         }
 
-        button{
+        a{
           width: 70%;
+        
+        button{
+          width: 100%;
           font-size: toRem(16);
           padding: toRem(5);
           border: none;
@@ -72,6 +75,7 @@
             border: 1px solid $gris1;
           }
         }
+      }
       }
     }
   }
