@@ -41,7 +41,7 @@
     box-sizing: border-box;
     border: 1px solid #B881FF;
     border-radius: 10px;
-    
+    overflow: scroll;
     
 }
 
@@ -75,7 +75,7 @@
     div{
         margin-top: 80px;
         h1{
-            font-size: 50px;
+            font-size: 2rem;
         }
     }
     button{

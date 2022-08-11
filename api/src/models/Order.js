@@ -1,25 +1,23 @@
 const { Schema, model } = require('mongoose')
 
 const orderSchema = new Schema({
-    userId: {
-        type: String,
-        required: true
+    user_id_stripe: { type: String, required: true },
+    user_name: { type: String, required: true },
+    user_email: { type: String },
+    user_phone: { type: String },
+    // customerId: { type: String },
+    // paymentIntentId: { type: String },
+    address: {
+        city: { type: String },
+        country: { type: String },
+        address_line_1: { type: String },
+        postal_code: { type: String },
     },
-    customerId: {
-        type: String
-    },
-    paymentIntentId: { type: String },
     products: [
         {
-            id: {
-                type: Schema.Types.ObjectId,
-                ref: "Book"
-            },
+            title: { type: String },
             cartQuantity: { type: Number },
-            desc: { type: String },
-            image: { type: String },
-            name: { type: String },
-            price: { type: Number },
+            subtotal_price: { type: Number },
         }
     ],
     total_price: {
@@ -30,6 +28,7 @@ const orderSchema = new Schema({
         type: String,
         required: true
     },
+    delivery_status: { type: String, default: "pending" },
 },
     {
         timestamps: true,

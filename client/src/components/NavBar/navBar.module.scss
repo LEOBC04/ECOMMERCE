@@ -12,7 +12,12 @@
     top: 0;
     // margin-top: 0;
     //  z-index: 1;
-
+    @include tabletMax() {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
     .logo {
         display: flex;
         flex-direction: column;
@@ -21,11 +26,11 @@
         list-style: none;
     }
 
-    .saldo{
+    .saldo {
         display: flex;
         flex-direction: row;
         align-items: center;
-        border: 1px solid #B881FF;
+        border: 1px solid #b881ff;
         padding: 5px;
         border-radius: 10px;
         gap: 8px;
@@ -46,6 +51,7 @@
         }
 
         li {
+            // background-color: #B881FF;
             // margin: toRem(5);
 
             a {

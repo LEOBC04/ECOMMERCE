@@ -3,6 +3,7 @@ const router = express.Router();
 const Order = require('../models/Order.js');
 const Stripe = require('stripe');
 const stripe = Stripe(process.env.STRIPE_KEY);
+const { handleWebHook } = require('../controllers/payment.controller.js')
 const { payment } = require("../controllers/payment.controller.js");
 const {
   paymentGiftCard,
@@ -10,6 +11,7 @@ const {
 
 router.post("/create-checkout-session", payment);
 router.post("/create-checkout-giftCardsession", paymentGiftCard);
+
 
 
 // const createOrder = async (customer, data) => {
@@ -105,6 +107,8 @@ router.post(
 
 
 
+router.post('/create-checkout-session', payment);
+router.post('/webhook', handleWebHook);
 
 
 module.exports = router

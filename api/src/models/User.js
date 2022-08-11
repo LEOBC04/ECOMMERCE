@@ -56,11 +56,12 @@ const userSchema = new Schema(
       type: Boolean,
       default: false,
     },
-    localStorageToken:  {
+    localStorageToken: {
       type: String
     },
     available_money: {
       type: Number,
+      min: 0,
       default: 500,
     }
   },

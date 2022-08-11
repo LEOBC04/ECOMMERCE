@@ -91,10 +91,10 @@
   }
   @media only screen and (max-width: 768px) {
     .main{
-        margin-top: toRem(-80);
+        margin-top: toRem(-160);
         .container {
             font-size: 14px;
-            max-height: 300px;
+            max-height: 250px;
             border-bottom: 1px solid gray;
             display: flex;
             ul{
@@ -114,10 +114,10 @@
   }
   @media only screen and (max-width: 570px) {
     .main{
-        margin-top: toRem(-110);
+        margin-top: toRem(-180);
         .container {
             font-size: 12px;
-            max-height: 250px;
+            max-height: 230px;
             border-bottom: 1px solid gray;
             display: flex;
             ul{
@@ -137,15 +137,20 @@
   }
   @media only screen and (max-width: 375px) {
     .main{
-        margin-top: toRem(-100);
+        margin-top: toRem(-180);
         flex-direction: row;
         .container {
-            width: 8em;
+            width: 7em;
             font-size: 12px;
-            max-height: 250px;
+            max-height: 190px;
             border-bottom: 1px solid gray;
             display: flex;
-            
+            .userPhoto{
+              object-fit: cover;
+              width:20px;
+              height:20px;
+              border-radius:20px;
+            }
           }
     }
   }

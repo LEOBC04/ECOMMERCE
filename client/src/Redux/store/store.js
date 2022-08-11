@@ -8,6 +8,7 @@ import userReducer from '../slices/userSlice';
 import tokenReducer from '../slices/tokenSlice';
 import giftCardReducer from '../slices/giftCardSlice';
 import dealsReducer from '../slices/dealsSlice';
+import ordersSlice from '../slices/ordersSlice';
 
 
 const store = configureStore({
@@ -20,7 +21,8 @@ const store = configureStore({
     users: userReducer,
     token: tokenReducer,
     giftCard: giftCardReducer,
-    deals: dealsReducer
+    deals: dealsReducer,
+    orders: ordersSlice
   }
 })
 store.dispatch(getTotals())

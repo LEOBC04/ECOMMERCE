@@ -118,3 +118,247 @@
 		font-size: 12px;
     }
 }
+
+@media only screen and (max-width: 1440px) {
+
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        
+        width: 50vw;
+        height: 50vh;
+        border: 1px solid #B881FF;
+        border-radius: 10px;
+        padding: 1em;
+        color: white;
+        
+        p{
+            font-size: 40px;
+    
+        }
+    }
+    .header{
+        display: flex;
+        align-items: center;
+        justify-items: center;
+    }
+    .body{
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        flex-direction: column;
+    }
+    .star{
+    
+        
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 3em;
+            color: grey;
+            transition: color  0.5s;
+            &.in-rate{
+                color: $secundario
+            } 
+            &.in-hover{
+                color: $secundario
+            }
+        
+    
+    
+    }
+    
+    
+    .form{
+        font-size: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        select{
+            border-radius: 5px;
+            border: 2px solid #e2e2e2;
+            width: 50%;
+           
+            position: relative;
+            
+        }
+        textarea{
+            resize: none;
+            width: 100%;
+            height: 100px;
+        }
+    
+        input:focus {
+            outline: none;
+            border: 2px solid #B881FF;
+            }
+    
+        label{
+            position: relative;
+            
+        }
+        .buttonSave{
+            padding: 10px;
+            background:$secundario;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+    
+        }
+        .buttonCancel{
+            padding: 10px;
+            background:$secundario;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .state{
+            display: inline-flex;
+            .yesNo{
+                position: relative;
+                left: 1em
+            }
+            .circle{
+                position: relative;
+                right: 0.8em;
+            }
+        }
+    
+        .error{
+            position: relative;
+            left: 1em;
+            color: #e92b2d;
+            font-weight: 600px;
+            font-size: 12px;
+        }
+    }
+      
+
+  }
+
+  @media only screen and (max-width: 545px) {
+
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        
+        width: 50vw;
+        height: 50vh;
+        border: 1px solid #B881FF;
+        border-radius: 10px;
+        padding: 1em;
+        color: white;
+        
+        p{
+            font-size: 30px;
+    
+        }
+    }
+    .header{
+        display: flex;
+        align-items: center;
+        justify-items: center;
+    }
+    .body{
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        flex-direction: column;
+    }
+    .star{
+    
+        
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 2em;
+            color: grey;
+            transition: color  0.5s;
+            &.in-rate{
+                color: $secundario
+            } 
+            &.in-hover{
+                color: $secundario
+            }
+        
+    
+    
+    }
+    
+    
+    .form{
+        font-size: 22px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        select{
+            border-radius: 5px;
+            border: 2px solid #e2e2e2;
+            width: 50%;
+           
+            position: relative;
+            
+        }
+        textarea{
+            resize: none;
+            width: 100%;
+            height: 100px;
+        }
+    
+        input:focus {
+            outline: none;
+            border: 2px solid #B881FF;
+            }
+    
+        label{
+            position: relative;
+            
+        }
+        .buttonSave{
+            padding: 10px;
+            background:$secundario;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+    
+        }
+        .buttonCancel{
+            padding: 10px;
+            background:$secundario;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .state{
+            display: inline-flex;
+            .yesNo{
+                position: relative;
+                left: 1em
+            }
+            .circle{
+                position: relative;
+                right: 0.8em;
+            }
+        }
+    
+        .error{
+            position: relative;
+            left: 1em;
+            color: #e92b2d;
+            font-weight: 600px;
+            font-size: 12px;
+        }
+    }
+      
+
+  }

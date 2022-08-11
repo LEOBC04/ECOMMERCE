@@ -40,13 +40,13 @@ function Discounts(){
     console.log('entro')
         if (reload){
             dispatch(fetchAllBooks())
-            
-            window.location.reload()
+            setReload(false)
+            // window.location.reload()
             
         }else{
             dispatch(fetchAllBooks())
-        
-            window.location.reload()
+            setReload(true)
+            //window.location.reload()
         }
     }
 
@@ -84,7 +84,7 @@ function Discounts(){
           
           //llenarState()
       
-    }, []);
+    }, [reload]);
 
     return(
         <div className={s.container}>

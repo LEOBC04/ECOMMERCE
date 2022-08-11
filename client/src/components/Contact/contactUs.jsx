@@ -105,7 +105,7 @@ function ContactUs(){
                             <textarea name="comment" onChange={handleInputChange}/>
                             {errors ? <p> {errors.comment}</p> : null}
                         </div>
-                        <input type="hidden" name="_next" value='http://localhost:3000' required/>
+                        <input type="hidden" name="_next" value='https://ecommerce-books-three.vercel.app/' required/>
                         <input type="hidden" name="_captcha" value='false' required/>
                         <button type="submit">Send</button>
                     </form> 

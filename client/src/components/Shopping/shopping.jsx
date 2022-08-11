@@ -43,13 +43,9 @@ const Shopping = () =>{
   }
 
   return(
-    <div>
-
-    <NavBar />
-    <br />
-    <br />
+    <div >
     <div className={styles.cartContainer}>
-    
+    <div className={styles.container}>
       <h2>Shopping cart</h2>
       {cart.cartItems.length === 0 ? (
         <div className={styles.cartEmpty}>
@@ -132,9 +128,10 @@ const Shopping = () =>{
           
         </div>
         
-        )}
+        )}</div>
+   <Footer />     
     </div>
-    <Footer />
+    
     </div>
   )
 }

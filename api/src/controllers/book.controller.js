@@ -37,7 +37,7 @@ const getBooks = async (req, res) => {
 
   try {
     let books = await Book.find({$and:[
-      {stock:{$ne:0}},
+      {stock:{$gte:1}},
       { deleted: false }]});
     if (sort) books = sortNames({ books, sort });
     if (price) books = sortPrices({ books, price });

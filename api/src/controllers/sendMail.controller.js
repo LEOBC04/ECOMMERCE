@@ -4,15 +4,15 @@ const sendMailActivate = (token, email) => {
   let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "samirjose675",
-      pass: "zgimctzowdiuaozx",
+      user: "clickandreadecommerce",
+      pass: "lbbqxppoqmhkgqfv",
     },
   });
 
   var mailOptions = {
     from: "samirjose675@gmail.com",
     to: `${email}`,
-    subject: "Enviado desde libritos.com",
+    subject: "Click&Read | Activate account",
     html: `<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
     <head>
@@ -134,15 +134,6 @@ const sendMailActivate = (token, email) => {
         <tr>
           <td style="overflow-wrap:break-word;word-break:break-word;padding:0px;font-family:'Cabin',sans-serif;" align="left">
             
-    <table width="100%" cellpadding="0" cellspacing="0" border="0">
-      <tr>
-        <td style="padding-right: 0px;padding-left: 0px;" align="center">
-          
-          <img align="center" border="0" src="https://assets.unlayer.com/projects/93642/1659591468555-381406.jpg" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 29%;max-width: 174px;" width="174"/>
-          
-        </td>
-      </tr>
-    </table>
     
           </td>
         </tr>
@@ -316,7 +307,7 @@ const sendMailActivate = (token, email) => {
       <div style="color: #ffffff; line-height: 140%; text-align: left; word-wrap: break-word;">
         <p style="font-size: 14px; line-height: 140%; text-align: left; color: #ffffff"><span style="font-family: Lato, sans-serif; font-size: 16px; line-height: 22.4px;">Contact</span></p>
     <p style="font-size: 14px; line-height: 140%; text-align: left; color: #ffffff"><span style="font-family: Lato, sans-serif; font-size: 16px; line-height: 22.4px;">+111 222 333 </span></p>
-    <p style="font-size: 14px; line-height: 140%; text-align: left; color: #ffffff"><span style="font-family: Lato, sans-serif; font-size: 16px; line-height: 22.4px;"> Info@company.com</span></p>
+    <p style="font-size: 14px; line-height: 140%; text-align: left; color: #ffffff"><span style="font-family: Lato, sans-serif; font-size: 16px; line-height: 22.4px;"> clickandreadecommerce@gmail.com</span></p>
       </div>
     
           </td>
@@ -399,7 +390,7 @@ const sendMailActivate = (token, email) => {
           <td style="overflow-wrap:break-word;word-break:break-word;padding:5px 10px 10px;font-family:'Cabin',sans-serif;" align="left">
             
       <div style="color: #ffffff; line-height: 140%; text-align: left; word-wrap: break-word;">
-        <p style="font-size: 14px; line-height: 140%; text-align: left;"><span style="font-family: Lato, sans-serif; font-size: 14px; line-height: 19.6px; color: #ffffff">Libritos.com ©  All Rights Reserved</span></p>
+        <p style="font-size: 14px; line-height: 140%; text-align: left;"><span style="font-family: Lato, sans-serif; font-size: 14px; line-height: 19.6px; color: #ffffff">Click&Read © All Rights Reserved</span></p>
       </div>
     
           </td>
@@ -472,6 +463,7 @@ const sendMailActivate = (token, email) => {
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
+      console.log(error)
       res.status(500).send(error.message);
     } else {
       console.log("Email enviado.");
@@ -484,15 +476,15 @@ const sendMailForgot = (token, email) => {
   let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "samirjose675",
-      pass: "zgimctzowdiuaozx",
+      user: "clickandreadecommerce",
+      pass: "lbbqxppoqmhkgqfv",
     },
   });
 
   var mailOptions = {
     from: "samirjose675@gmail.com",
     to: `${email}`,
-    subject: "Enviado desde libritos.com",
+    subject: "Click&Read | Forgot password",
     html: `<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
     <head>
@@ -654,16 +646,7 @@ const sendMailForgot = (token, email) => {
       <tbody>
         <tr>
           <td style="overflow-wrap:break-word;word-break:break-word;padding:0px;font-family:'Lato',sans-serif;" align="left">
-            
-    <table width="100%" cellpadding="0" cellspacing="0" border="0">
-      <tr>
-        <td style="padding-right: 0px;padding-left: 0px;" align="center">
-          
-          <img align="center" border="0" src="https://assets.unlayer.com/projects/93642/1659625383695-6118.jpg" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 29%;max-width: 174px;" width="174"/>
-          
-        </td>
-      </tr>
-    </table>
+
     
           </td>
         </tr>
@@ -754,7 +737,7 @@ const sendMailForgot = (token, email) => {
       <div style="line-height: 140%; text-align: center; word-wrap: break-word;">
         <p style="font-size: 14px; line-height: 140%;"><span style="font-size: 18px; line-height: 25.2px; color: #666666;">Hello,</span></p>
     <p style="font-size: 14px; line-height: 140%;"> </p>
-    <p style="font-size: 14px; line-height: 140%;"><span style="font-size: 18px; line-height: 25.2px; color: #666666;">We have sent you this email in response to your request to reset your password on Libritos.com.</span></p>
+    <p style="font-size: 14px; line-height: 140%;"><span style="font-size: 18px; line-height: 25.2px; color: #666666;">We have sent you this email in response to your request to reset your password on Click&Read.</span></p>
     <p style="font-size: 14px; line-height: 140%;"> </p>
     <p style="font-size: 14px; line-height: 140%;"><span style="font-size: 18px; line-height: 25.2px; color: #666666;">To reset your password, please follow the link below: </span></p>
       </div>
@@ -825,7 +808,7 @@ const sendMailForgot = (token, email) => {
       <div style="line-height: 140%; text-align: left; word-wrap: break-word;">
         <p style="font-size: 14px; line-height: 140%;"><span style="font-size: 16px; line-height: 22.4px; color: #ecf0f1;">Contact</span></p>
     <p style="font-size: 14px; line-height: 140%;"><span style="font-size: 16px; line-height: 22.4px; color: #ecf0f1;">+111 222 333  </span></p>
-    <p style="font-size: 14px; line-height: 140%;"><span style="font-size: 16px; line-height: 22.4px; color: #ecf0f1;">Info@company.com</span></p>
+    <p style="font-size: 14px; line-height: 140%;"><span style="font-size: 16px; line-height: 22.4px; color: #ecf0f1;">clickandreadecommerce@gmail.com</span></p>
       </div>
     
           </td>
@@ -908,7 +891,7 @@ const sendMailForgot = (token, email) => {
           <td style="overflow-wrap:break-word;word-break:break-word;padding:5px 10px 10px;font-family:'Lato',sans-serif;" align="left">
             
       <div style="line-height: 140%; text-align: left; word-wrap: break-word;">
-        <p style="line-height: 140%; font-size: 14px;"><span style="font-size: 14px; line-height: 19.6px;"><span style="color: #ecf0f1; font-size: 14px; line-height: 19.6px;"><span style="line-height: 19.6px; font-size: 14px;">Libritos.com ©  All Rights Reserved</span></span></span></p>
+        <p style="line-height: 140%; font-size: 14px;"><span style="font-size: 14px; line-height: 19.6px;"><span style="color: #ecf0f1; font-size: 14px; line-height: 19.6px;"><span style="line-height: 19.6px; font-size: 14px;">Click&Read © All Rights Reserved</span></span></span></p>
       </div>
     
           </td>
@@ -981,6 +964,7 @@ const sendMailForgot = (token, email) => {
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
+      console.log(error)
       res.status(500).send(error.message);
     } else {
       console.log("Email enviado.");

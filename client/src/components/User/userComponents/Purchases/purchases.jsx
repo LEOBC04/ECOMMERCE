@@ -24,7 +24,7 @@ function Purchases(){
 
     let info = jwt_decode(window.localStorage.token);
     let id = info.id
-    //console.log(info)
+    console.log(userById)
     
     
     useEffect(() => {
@@ -48,19 +48,19 @@ function Purchases(){
 
     if(userById.purchased_books){
         let deletecopy = [...new Set(userById.purchased_books)]
-        //console.log(deletecopy)
+        console.log(deletecopy)
         
         libros = deletecopy.map(libro => {
-            // console.log(libro)
-            // console.log('//////')
-            let filtrado = books.filter(b =>  b._id === libro)
+             //console.log(libros)
+            console.log('//////')
+            let filtrado = books.filter(b =>  b._id === libro._id)
             //console.log(filtrado)
             return filtrado
         })
         
         
     }
-    //console.log(libros)
+    console.log(libros)
  
 
     let[bookss, setBooks] = useState([{ bookName:"Harry Potter", image:portada, price: 40.50, amount: 15, state:'Nuevesito prro'}, {    bookName:"El Señor de los Anillos", image:portada2, price: 40.50, amount: 10, state:'Nuevesito prro'}])

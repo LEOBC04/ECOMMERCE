@@ -23,13 +23,10 @@ const Footer = () => {
                 <Link className={s.Logos} to={"/"}>
                     <i class="fab fa-linkedin fa-2x"></i>
                 </Link>
+                <a href="https://www.instagram.com/clickandreadstore/" className={s.Logos}> <i class="fab fa-instagram fa-2x">   </i></a>
 
-                <Link className={s.Logos} to={"/"}>
-                    <i class="fab fa-instagram fa-2x"></i>
-                </Link>
-                <Link className={s.Logos} to={"/"}>
-                    <i class="fab fa-facebook-square fa-2x"></i>
-                </Link>
+                <a href="https://www.facebook.com/profile.php?id=100084151102078" className={s.Logos}> <i class="fab fa-facebook-square fa-2x"></i></a>
+
                 <Link className={s.Logos} to={"/"}>
                     <i class="fab fa-twitter fa-2x"></i>
                 </Link><Link className={s.Logos} to={"/locations"}>

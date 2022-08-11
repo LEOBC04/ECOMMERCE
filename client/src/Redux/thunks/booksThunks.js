@@ -55,4 +55,14 @@ const fetchBooksGenres = () => (dispatch) => {
     .catch((error) => console.log(error));
 };
 
+// const deleteFetchBook = (id) => (dispatch) => {
+//   let config ={headers:{authorization:localStorage.getItem("token")}}
+//   axios
+//     .delete("/books", config)
+//     .then((response) => {
+//       dispatch(deleteBook(response.data.books));
+//     })
+//     .catch((error) => console.log(error));
+// };
+
 export { fetchAllBooks, fetchBookByName, fetchBooksDetail, fetchBooksGenres , fetchBooksById};

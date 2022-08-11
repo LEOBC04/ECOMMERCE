@@ -3,9 +3,15 @@
 @import '../../assets/sass/variables.scss';
 
 .cartContainer{
-    padding: 2rem 4rem;
+  
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
+.container{
+    margin:2rem;
+}
 .cartContainer h2{
     font-weight: 400;
     font-size: 30px;
@@ -179,6 +185,30 @@
 }
 
 
+@media (max-width: 665px) {
+    
+    .cartContainer {
+      padding: 2rem;
+      margin-top: 230px;
+    }
+    .cartContainer .titles {
+      display: none;
+    }
+    .cartItem,
+    .cartContainer .titles {
+      grid-template-columns: 1fr;
+      row-gap: 1rem;
+    }
+    .cartItem .cartProductTotalPrice {
+      justify-self: left;
+    }
+    .cartSummary {
+      flex-direction: column;
+    }
+    .cartSummary .clearCart {
+      margin-bottom: 2rem;
+    }
+  }
 
 
 

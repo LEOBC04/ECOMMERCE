@@ -1,4 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { axios } from 'axios'
+import { setHeaders } from './api'
+import { toast } from "react-toastify";
 const initialState = {
   books: [],
   booksCopy: [],
@@ -8,7 +11,25 @@ const initialState = {
   filterEmpty: false,
   bookById:[],
   searchEmpty: false,
+  deleteStatus: null
 };
+
+
+// export const booksDelete = createAsyncThunk(
+//   "books/booksDelete",
+//   async (id) => {
+//     try {
+//       const response = await axios.delete(
+//         `http://localhost:3001/books/${id}`,
+//         setHeaders()
+//       );
+//       return response.data
+//     } catch (error) {
+//       console.log(error)
+//       toast.error(error.response?.data)
+//     }
+//   }
+// )
 
 const bookSlice = createSlice({
   name: "books",
@@ -66,8 +87,24 @@ const bookSlice = createSlice({
     },
     resetObjectFilter(state, action) {
       state.filterObject = {};
-    }
-  },
+    },
+  }, //extraReducers:{
+  //   [booksDelete.pending]: (state, action) => {
+  //     state.deleteStatus = "pending";
+  //   },
+  //   [booksDelete.fulfilled]: (state, action) => {
+
+  //     const newList = state.books.filter((book) => book._id !== action.payload._id)
+
+  //     state.books = newList
+
+  //     state.deleteStatus = "success";
+  //     toast.success("Product Deleted!");
+  //   },
+  //   [booksDelete.rejected]: (state, action) => {
+  //     state.deleteStatus = "rejected";
+  //   }
+  // },
 });
 
 export const {

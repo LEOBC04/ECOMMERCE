@@ -8,6 +8,7 @@ import { clearDetail } from "../../Redux/slices/bookSlice";
 import { Link } from "react-router-dom";
 import { getWishList } from "../../Redux/slices/wishListSlice";
 import s from "./bookDetail.module.scss";
+import { addToCart } from "../../Redux/slices/shoping.slice";
 
 const BookDetail = (props, { book }) => {
   const [loading, setLoading] = useState(true);
@@ -51,14 +52,16 @@ const BookDetail = (props, { book }) => {
 
   const [cart, setCart] = useState([]);
 
-  const handleClick = () => {
-    setCart(["hola me agregaron al estado cart"]);
-  };
+
 
   const handleWishList = (book) => {
     console.log(book);
     dispatch(getWishList(book));
   };
+  const handleAddToCart = (book) => {
+    dispatch(addToCart(book));
+  };
+
 
   return (
     <div>
@@ -117,8 +120,8 @@ const BookDetail = (props, { book }) => {
                         <h4>Comment: {comment}</h4>
                       </div>
                     ) : null}
-                    <figure onClick={handleClick}>
-                      <button>
+                    <figure >
+                      <button onClick={() => handleAddToCart(booksDetail)}>
                         <i class="fas fa-cart-plus fa-lg"></i>{" "}
                         <h3>Add to cart</h3>
                       </button>
