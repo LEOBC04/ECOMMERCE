@@ -3,6 +3,7 @@ const Book = require("../models/Book.js");
 const bcrypt = require("bcrypt");
 const {GiftCardNotification} = require("./sendMail.controller");
 const { getByName, getByEmail } = require("../lib/user.controller.helper.js");
+const jwt = require('jsonwebtoken');
 
 
 const getUsers = async (req, res) => {
